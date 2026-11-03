@@ -1,0 +1,39 @@
+.footer {
+  display: grid;
+  gap: clamp(28px, 4vw, 64px);
+  padding: clamp(56px, 8vw, 128px) var(--margin) clamp(28px, 3vw, 48px);
+  border-top: 1px solid var(--line);
+  background: var(--black);
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 11.8vw, 14rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+
+.footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px 48px;
+  color: var(--muted);
+  font-size: 1.0625rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+}
+
+.footer__links a {
+  display: inline-block;
+  padding: 6px 0;
+  color: var(--ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}

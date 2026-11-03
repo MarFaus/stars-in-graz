@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EuroSkills Concerts</title>
+  <meta name="description" content="Discover concerts in Graz, book seats and get your tickets.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <header class="header">
+    <a class="header__brand" href="#/">EuroSkills Concerts</a>
+    <div class="header__tickets">
+      <span class="header__hint">Already booked?</span>
+      <a class="btn btn--ghost btn--small" href="#/tickets">Get Tickets</a>
+    </div>
+  </header>
+  <main class="view" id="view" tabindex="-1"></main>
+  <footer class="footer">
+    <p>EuroSkills Concerts, Graz · <a href="../module-b/">Stars in Graz: concert site</a></p>
+    <p class="footer__demo" id="demo-note" hidden>Demo mode: data from the Module C dump, bookings are stored in this browser only.</p>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="data/demo-data.js"></script>
+  <script src="data/countries.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

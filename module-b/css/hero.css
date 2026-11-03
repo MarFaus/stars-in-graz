@@ -1,0 +1,284 @@
+/* Landing screen: exactly one browser window under the header, no scrolling needed. */
+.landing {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: calc(100vh - var(--nav-h));
+  height: calc(100svh - var(--nav-h));
+  min-height: 480px;
+  background: var(--black);
+}
+
+.landing__main {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  min-height: 0;
+}
+
+.landing__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(14px, 2.6vh, 32px);
+  padding: clamp(16px, 4vh, 56px) var(--margin);
+  min-width: 0;
+}
+
+.landing__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, min(9.2vw, 17vh), 11rem);
+  font-weight: 300;
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.landing__title span {
+  display: block;
+}
+
+.landing__when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.7em;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, min(2.2vw, 4.2vh), 2.1rem);
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.landing__lead {
+  max-width: 34em;
+  color: var(--muted);
+  font-size: clamp(1rem, min(1.3vw, 2.6vh), 1.3125rem);
+}
+
+.landing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.landing__soon {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.landing__media {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.landing__media img,
+.landing__media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.05) brightness(0.82);
+}
+
+/* A dark veil keeps the picture quiet beside the type. */
+.landing__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+}
+
+/* The programme at a glance: six hours as quiet columns. */
+.hours {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+
+.hours li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: clamp(12px, 2vh, 24px) clamp(10px, 1.6vw, 28px) clamp(12px, 2.2vh, 26px);
+  color: var(--muted);
+  font-size: clamp(0.8125rem, 1.1vw, 1.0625rem);
+  line-height: 1.25;
+  transition: background-color 300ms var(--ease-out), color 300ms var(--ease-out);
+}
+
+.hours li::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 400ms var(--ease-out);
+}
+
+.hours time {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.3vw, 2.4rem);
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hours li:hover {
+    background: var(--surface);
+    color: var(--ink);
+  }
+
+  .hours li:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+/* Entrance: heading, then text, then picture, staggered. */
+.landing__title span,
+.landing__when,
+.landing__lead,
+.landing__actions,
+.hours li {
+  animation: rise 800ms var(--ease-out) both;
+}
+
+.landing__title span:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.landing__title span:nth-child(2) {
+  animation-delay: 170ms;
+}
+
+.landing__when {
+  animation-delay: 290ms;
+}
+
+.landing__lead {
+  animation-delay: 370ms;
+}
+
+.landing__actions {
+  animation-delay: 450ms;
+}
+
+.landing__media {
+  animation: fade 1400ms var(--ease-out) 100ms both;
+}
+
+.hours li:nth-child(1) {
+  animation-delay: 420ms;
+}
+
+.hours li:nth-child(2) {
+  animation-delay: 490ms;
+}
+
+.hours li:nth-child(3) {
+  animation-delay: 560ms;
+}
+
+.hours li:nth-child(4) {
+  animation-delay: 630ms;
+}
+
+.hours li:nth-child(5) {
+  animation-delay: 700ms;
+}
+
+.hours li:nth-child(6) {
+  animation-delay: 770ms;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: scale(1.12);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.landing__media img {
+  animation: drift 2800ms var(--ease-out) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing__media video {
+    display: none;
+  }
+}
+
+/* Tablet and phone: picture on top, text under it, hours in two rows. */
+@media (max-width: 900px) {
+  .landing__main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 36fr) minmax(0, 64fr);
+  }
+
+  .landing__media {
+    order: -1;
+  }
+
+  .landing__media::after {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%);
+  }
+
+  .landing__text {
+    padding-block: 14px;
+  }
+
+  .landing__title {
+    font-size: clamp(2.4rem, min(13vw, 9vh), 7rem);
+  }
+
+  .landing__when {
+    font-size: clamp(1.05rem, min(4.6vw, 3.4vh), 1.9rem);
+  }
+
+  .landing__lead {
+    font-size: clamp(0.9375rem, min(3.6vw, 2.4vh), 1.25rem);
+  }
+
+  .hours {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hours li {
+    padding: 8px 12px;
+    font-size: clamp(0.8125rem, 3vw, 1.0625rem);
+  }
+
+  .hours li:nth-child(n + 4) {
+    border-top: 1px solid var(--line);
+  }
+
+  .hours time {
+    font-size: clamp(1.05rem, 4.6vw, 2rem);
+  }
+}
+
+@media (max-width: 900px) and (max-height: 700px) {
+  .landing__lead,
+  .landing__soon {
+    display: none;
+  }
+}

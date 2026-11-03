@@ -1,0 +1,38 @@
+ЗАПУСК ПРОЕКТА НА WINDOWS
+
+ТРЕБОВАНИЯ
+  PHP CLI 8.3 или новее в PATH.
+  Расширения PHP ctype, fileinfo, filter, hash, mbstring, openssl, pdo,
+  pdo_sqlite, session, sqlite3 и tokenizer.
+  Composer нужен только если отсутствует папка module-c\vendor.
+  Node.js и MySQL не нужны.
+
+УСТАНОВКА PHP
+  1. Скачайте x64 Thread Safe ZIP с https://windows.php.net/download/
+     и распакуйте, например, в C:\php.
+  2. Скопируйте php.ini-development в php.ini.
+  3. В php.ini включите extension=fileinfo, extension=mbstring,
+     extension=openssl, extension=pdo_sqlite и extension=sqlite3
+     (уберите начальный символ ;). Если extension_dir закомментирован,
+     задайте extension_dir = "ext".
+  4. Добавьте C:\php в системную переменную Path.
+  5. Закройте и заново откройте VS Code и терминалы.
+  6. Проверьте php -v и php -m. В списке модулей должны быть
+     расширения, указанные выше.
+
+ЗАПУСК
+  Дважды щёлкните start.bat или выполните в папке проекта:
+    php -S localhost:8000 router.php
+
+  Откройте http://localhost:8000/module-b/
+  Бронирование: http://localhost:8000/module-d/
+  API: http://localhost:8000/module-c/api/v1/concerts
+
+  В VS Code можно запустить сервер через Ctrl+Shift+B.
+  Не закрывайте окно сервера, пока пользуетесь сайтом. Для остановки
+  нажмите Ctrl+C.
+
+БЕЗ PHP
+  module-b\index.html и module-d\index.html можно открыть напрямую.
+  В этом режиме приложение бронирования использует демо-API и сохраняет
+  брони только в localStorage текущего браузера.

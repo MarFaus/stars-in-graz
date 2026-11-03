@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stars in Graz: музыкальный концерт 30.11.2021</title>
+  <meta name="description" content="Stars in Graz: однодневный музыкальный концерт шести групп 30.11.2021 в Messe Congress Graz.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/schedule.css">
+  <link rel="stylesheet" href="css/artists.css">
+  <link rel="stylesheet" href="css/venue.css">
+  <link rel="stylesheet" href="css/tickets.css">
+  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <script src="js/motion.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#content">К содержимому</a>
+  <div class="progress" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="nav__brand" href="#top">Stars in Graz</a>
+    <nav class="nav__links" aria-label="Разделы страницы">
+      <ul>
+        <li><a href="#schedule">Расписание</a></li>
+        <li><a href="#artists">Артисты</a></li>
+        <li><a href="#venue">Площадка</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+    <a class="button nav__buy" href="#tickets">Купить билеты</a>
+  </header>
+  <main id="content">
+    <section class="landing" aria-labelledby="title">
+      <div class="landing__main">
+        <div class="landing__text">
+          <h1 class="landing__title" id="title"><span>Stars</span> <span>in Graz</span></h1>
+          <p class="landing__when"><time datetime="2021-11-30">30.11.2021</time> <span>Messe Congress Graz</span></p>
+          <p class="landing__lead">Шесть групп, один вечер, с 17:00 до 22:00. Расписание, артисты и ответы на вопросы ниже.</p>
+          <div class="landing__actions">
+            <a class="button" href="#tickets">Купить билеты</a>
+            <p class="landing__soon">Прокрутите вниз: расписание и артисты</p>
+          </div>
+        </div>
+        <div class="landing__media">
+          <img src="mediafiles/images/concert/Elton-John-Messe-Graz-Open-2560x1440.jpg" alt="Вечерняя площадка Messe Graz: сцена слева и тысячи зрителей перед ней" width="2560" height="1440">
+          <video autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+            <source src="mediafiles/videos/Concert%20-%201630.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <ol class="hours" aria-label="Программа вечера">
+        <li><time datetime="17:00">17:00</time> Bilderbuch</li>
+        <li><time datetime="18:00">18:00</time> Wanda</li>
+        <li><time datetime="19:00">19:00</time> Christina Stürmer</li>
+        <li><time datetime="20:00">20:00</time> Volbeat</li>
+        <li><time datetime="21:00">21:00</time> Imagine Dragons</li>
+        <li><time datetime="22:00">22:00</time> Opus</li>
+      </ol>
+    </section>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <p>Bilderbuch<span></span>Wanda<span></span>Christina Stürmer<span></span>Volbeat<span></span>Imagine Dragons<span></span>Opus<span></span></p>
+        <p>Bilderbuch<span></span>Wanda<span></span>Christina Stürmer<span></span>Volbeat<span></span>Imagine Dragons<span></span>Opus<span></span></p>
+      </div>
+    </div>
+    <section class="schedule" id="schedule" aria-labelledby="schedule-title">
+      <div class="schedule__inner">
+        <h2 class="schedule__title" id="schedule-title">Расписание вечера</h2>
+        <p class="schedule__hint">Выберите время и посмотрите, кто выходит на сцену: шесть часов, шесть выступлений.</p>
+        <fieldset class="schedule__picker">
+          <legend class="visually-hidden">Время выступления</legend>
+        <input class="visually-hidden" type="radio" name="hour" id="t17" value="17" checked>
+        <input class="visually-hidden" type="radio" name="hour" id="t18" value="18">
+        <input class="visually-hidden" type="radio" name="hour" id="t19" value="19">
+        <input class="visually-hidden" type="radio" name="hour" id="t20" value="20">
+        <input class="visually-hidden" type="radio" name="hour" id="t21" value="21">
+        <input class="visually-hidden" type="radio" name="hour" id="t22" value="22">
+        <div class="schedule__tabs">
+          <label class="tab tab--17" for="t17"><time datetime="17:00">17:00</time><span>Bilderbuch</span></label>
+          <label class="tab tab--18" for="t18"><time datetime="18:00">18:00</time><span>Wanda</span></label>
+          <label class="tab tab--19" for="t19"><time datetime="19:00">19:00</time><span>Christina Stürmer</span></label>
+          <label class="tab tab--20" for="t20"><time datetime="20:00">20:00</time><span>Volbeat</span></label>
+          <label class="tab tab--21" for="t21"><time datetime="21:00">21:00</time><span>Imagine Dragons</span></label>
+          <label class="tab tab--22" for="t22"><time datetime="22:00">22:00</time><span>Opus</span></label>
+        </div>
+        <div class="schedule__panels" aria-live="polite">
+          <article class="panel panel--17" aria-label="17:00, Bilderbuch">
+            <img class="panel__photo" src="mediafiles/images/artists/bilderbuch.jpg" alt="Группа Bilderbuch на фотографии" style="object-position: 50% 40%" loading="lazy">
+            <div class="panel__text">
+              <h3 class="panel__name">Bilderbuch</h3>
+              <p class="panel__time">На сцене с 17:00 до 18:00</p>
+              <p>Bilderbuch — одна из самых успешных австрийских рок-групп, известная своей арт-поп-музыкой. Два последних сингла вышли в этом году и ждут своего исполнения перед вами!</p>
+            </div>
+          </article>
+          <article class="panel panel--18" aria-label="18:00, Wanda">
+            <img class="panel__photo" src="mediafiles/images/artists/wanda.jpg" alt="Группа Wanda на фотографии" style="object-position: 50% 30%" loading="lazy">
+            <div class="panel__text">
+              <h3 class="panel__name">Wanda</h3>
+              <p class="panel__time">На сцене с 18:00 до 19:00</p>
+              <p>Wanda — австрийская инди-поп-группа, основанная в Вене в 2012 году. Свою музыку они называют «поп-музыкой с “Amore”».</p>
+            </div>
+          </article>
+          <article class="panel panel--19" aria-label="19:00, Christina Stürmer">
+            <img class="panel__photo" src="mediafiles/images/artists/christina-sturmer.jpg" alt="Певица Christina Stürmer" style="object-position: 50% 28%" loading="lazy">
+            <div class="panel__text">
+              <h3 class="panel__name">Christina Stürmer</h3>
+              <p class="panel__time">На сцене с 19:00 до 20:00</p>
+              <p>Christina Stürmer — австрийская певица и автор песен, одна из самых продаваемых исполнителей немецкоязычной Европы середины 2000-х годов.</p>
+            </div>
+          </article>
+          <article class="panel panel--20" aria-label="20:00, Volbeat">
+            <img class="panel__photo" src="mediafiles/images/artists/volbeat.jpg" alt="Группа Volbeat на фотографии" style="object-position: 50% 30%" loading="lazy">
+            <div class="panel__text">
+              <h3 class="panel__name">Volbeat</h3>
+              <p class="panel__time">На сцене с 20:00 до 21:00</p>
+              <p>Volbeat — датская рок-группа из Копенгагена. Они играют смесь рок-н-ролла, хэви-метала и рокабилли.</p>
+            </div>
+          </article>
+          <article class="panel panel--21" aria-label="21:00, Imagine Dragons">
+            <img class="panel__photo" src="mediafiles/images/artists/imagine-dragons.jpg" alt="Группа Imagine Dragons на фотографии" style="object-position: 50% 40%" loading="lazy">
+            <div class="panel__text">
+              <h3 class="panel__name">Imagine Dragons</h3>
+              <p class="panel__time">На сцене с 21:00 до 22:00</p>
+              <p>Imagine Dragons — американская поп-рок-группа из Лас-Вегаса, первая рок-группа с четырьмя песнями, набравшими миллиард прослушиваний.</p>
+            </div>
+          </article>
+          <article class="panel panel--22" aria-label="22:00, Opus">
+            <img class="panel__photo" src="mediafiles/images/artists/opus.jpg" alt="Группа Opus на фотографии" style="object-position: 50% 35%" loading="lazy">
+            <div class="panel__text">
+              <h3 class="panel__name">Opus</h3>
+              <p class="panel__time">На сцене с 22:00 до 23:00</p>
+              <p>Opus — поп-рок-группа из Граца, известная синглом «Live Is Life». Этот вечер завершает программу.</p>
+            </div>
+          </article>
+        </div>
+        </fieldset>
+      </div>
+    </section>
+    <section class="artists" id="artists" aria-labelledby="artists-title">
+      <h2 class="section-title" id="artists-title">Шесть групп на одной сцене</h2>
+      <ul class="artists__list">
+        <li class="artist">
+          <img class="artist__photo" src="mediafiles/images/artists/bilderbuch2.jpg" alt="Группа Bilderbuch после награждения" style="object-position: 50% 50%" loading="lazy">
+          <div class="artist__text">
+            <h3 class="artist__name">Bilderbuch</h3>
+            <p class="artist__slot">На сцене в 17:00</p>
+            <p>Bilderbuch — одна из самых успешных австрийских рок-групп, известная своей арт-поп-музыкой.</p>
+            <p>Группа выпустила 6 альбомов. Два последних сингла вышли в этом году и ждут своего исполнения перед вами!</p>
+          </div>
+        </li>
+        <li class="artist">
+          <img class="artist__photo" src="mediafiles/images/artists/wanda2.webp" alt="Группа Wanda на улице города" style="object-position: 50% 40%" loading="lazy">
+          <div class="artist__text">
+            <h3 class="artist__name">Wanda</h3>
+            <p class="artist__slot">На сцене в 18:00</p>
+            <p>Wanda — австрийская инди-поп-группа, основанная в Вене в 2012 году.</p>
+            <p>Их стиль находится под влиянием рок-н-ролла, а также австропопа. Свою музыку они называют «поп-музыкой с “Amore”».</p>
+          </div>
+        </li>
+        <li class="artist">
+          <img class="artist__photo" src="mediafiles/images/artists/christina-sturmer2.jpg" alt="Певица Christina Stürmer на фоне моря" style="object-position: 50% 82%" loading="lazy">
+          <div class="artist__text">
+            <h3 class="artist__name">Christina Stürmer</h3>
+            <p class="artist__slot">На сцене в 19:00</p>
+            <p>Christina Stürmer — австрийская певица и автор песен.</p>
+            <p>С выпуском международного дебютного альбома Schwarz Weiss она стала одним из самых продаваемых австрийских исполнителей, появившихся в немецкоязычной Европе в середине 2000-х годов. За 15 лет карьеры Стюрмер продала более 2 миллионов пластинок.</p>
+          </div>
+        </li>
+        <li class="artist">
+          <img class="artist__photo" src="mediafiles/images/artists/volbeat2.jpg" alt="Группа Volbeat на чёрном фоне" style="object-position: 50% 35%" loading="lazy">
+          <div class="artist__text">
+            <h3 class="artist__name">Volbeat</h3>
+            <p class="artist__slot">На сцене в 20:00</p>
+            <p>Volbeat — датская рок-группа, образованная в Копенгагене в 2001 году. Они играют смесь рок-н-ролла, хэви-метала и рокабилли.</p>
+            <p>Второй альбом Rock the Rebel / Metal the Devil получил платиновый статус, а релиз 2010 года Beyond Hell / Above Heaven — широкое признание критиков: двойную платину в Дании, платину в Финляндии и Германии, золото в США, Швеции и Австрии.</p>
+          </div>
+        </li>
+        <li class="artist">
+          <img class="artist__photo" src="mediafiles/images/artists/imagine-dragons2.jpg" alt="Группа Imagine Dragons в красных костюмах" style="object-position: 50% 45%" loading="lazy">
+          <div class="artist__text">
+            <h3 class="artist__name">Imagine Dragons</h3>
+            <p class="artist__slot">На сцене в 21:00</p>
+            <p>Imagine Dragons — американская поп-рок-группа из Лас-Вегаса, штат Невада.</p>
+            <p>Они продали 77,5 миллионов сертифицированных синглов в США и 20 миллионов альбомов по всему миру. Это самая популярная группа 2018 года на Spotify и первая рок-группа, у которой четыре песни — «Radioactive», «Demons», «Believer» и «Thunder» — набрали более миллиарда прослушиваний.</p>
+          </div>
+        </li>
+        <li class="artist">
+          <img class="artist__photo" src="mediafiles/images/artists/opus2.webp" alt="Группа Opus на фоне вечернего неба" style="object-position: 50% 40%" loading="lazy">
+          <div class="artist__text">
+            <h3 class="artist__name">Opus</h3>
+            <p class="artist__slot">На сцене в 22:00</p>
+            <p>Opus — поп-рок-группа из Граца, Австрия. Известна в основном синглом 1985 года «Live Is Life», который вошёл в десятку лучших в нескольких европейских странах.</p>
+            <p>В августе 2020 года группа объявила о распаде 21 декабря 2021 года. В этот день состоится последний концерт в Оперном театре Граца.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="venue" id="venue" aria-labelledby="venue-title">
+      <div class="venue__top">
+        <div class="venue__text">
+          <h2 class="section-title" id="venue-title">Messe Congress Graz</h2>
+          <p>Messe Congress Graz — самый большой многофункциональный зал для мероприятий в Граце. Ещё до того, как здесь прошли «Звезды в Граце», на этой площадке выступали многие международные группы и музыканты.</p>
+          <p>Станьте его частью и окунитесь в уникальную атмосферу в этот особенный вечер.</p>
+        </div>
+        <img class="venue__city" src="mediafiles/images/graz/benjamin-wedemeyer-Ih4cJ1xco3c-unsplash.jpg" alt="Танцор в стойке на трамвайных путях ночного Граца" loading="lazy">
+      </div>
+      <figure class="venue__stage">
+        <img src="mediafiles/images/concert/Volbeat-Special-Guests-2017-Messe-Graz-Freigel%C3%A4nde-MCG-Wiesner-34-2560x1440.jpg" alt="Сцена и публика на открытой площадке Messe Graz ночью" loading="lazy">
+        <figcaption>Открытая площадка Messe Graz вечером во время концерта.</figcaption>
+      </figure>
+    </section>
+    <section class="tickets" id="tickets" aria-labelledby="tickets-title">
+      <div class="tickets__main">
+        <h2 class="section-title" id="tickets-title">Билеты на <span>30.11.2021</span></h2>
+        <p class="tickets__lead">Золотой круг у самой сцены, места для инвалидных колясок и оплата картой во всех киосках с едой.</p>
+        <a class="button button--dark" href="../module-d/index.html">Купить билеты</a>
+      </div>
+      <dl class="tickets__facts">
+        <div>
+          <dt>Первое выступление</dt>
+          <dd>17:00</dd>
+        </div>
+        <div>
+          <dt>Площадка</dt>
+          <dd>Messe Congress Graz</dd>
+        </div>
+        <div>
+          <dt>Без взрослых</dt>
+          <dd>с 16 лет</dd>
+        </div>
+      </dl>
+    </section>
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <h2 class="section-title" id="reviews-title">Гости о прошлом годе</h2>
+      <div class="reviews__feature">
+        <figure class="quote quote--main">
+          <blockquote><p>Отличная музыка, отличная публика, отличная атмосфера! Вернусь в следующем году!</p></blockquote>
+          <figcaption>Элиза Хаас</figcaption>
+        </figure>
+        <img class="reviews__photo" src="mediafiles/images/concert/maxime-lebrun-h5G0WdtwcEg-unsplash.jpg" alt="Публика на концерте поднимает руки и телефоны с огоньками" loading="lazy">
+      </div>
+      <div class="reviews__more">
+          <figure class="quote">
+            <blockquote><p>Ещё раз спасибо за ещё одну замечательную звезду в Граце! С каждым годом всё лучше. Это лучший музыкальный фестиваль в мире, и я рада, что являюсь его частью.</p></blockquote>
+            <figcaption>Мона Штайнбауэр</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>«Звезды в Граце» были просто потрясающими. Радость со сцены была заразительной. За все годы, что я заказывал концерты, ни один не вызвал более восторженного отклика. Это было не в чартах!</p></blockquote>
+            <figcaption>Билл Дизи</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>На вчерашнем концерте время остановилось… Большое спасибо! Мы отлично провели время!</p></blockquote>
+            <figcaption>Марк Липман</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>Ух ты! Такой восхитительный весёлый вечер в прошлую субботу. Группы были великолепны, а программа прекрасна! Мы с нетерпением ждём следующего.</p></blockquote>
+            <figcaption>Дэвид Рини</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>Это отличный музыкальный концерт с действительно хорошей публикой! Блестящая атмосфера и много счастливых лиц, молодцы на отличном мероприятии!</p></blockquote>
+            <figcaption>Леони Хэндл</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote><p>Не могу переоценить, насколько весело было на «Звёздах в Граце». Друзья, отличная музыка, декорации, ночная вечеринка. Ух ты! Так рад быть там!</p></blockquote>
+            <figcaption>Кристиан Баумгартнер</figcaption>
+          </figure>
+      </div>
+    </section>
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <h2 class="section-title faq__title" id="faq-title">Частые вопросы</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>Что такое «Звезды в Граце»?</summary>
+          <p>«Звезды в Граце» — это однодневный музыкальный концерт, на котором разные артисты исполняют свои самые популярные песни. Проходит раз в год с 2015 года.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Когда состоится «Звезды в Граце»?</summary>
+          <p>30.11.2021. Первое выступление начинается в 17:00.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Какой минимальный возраст?</summary>
+          <p>Лица младше 16 лет без сопровождения взрослых не допускаются.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Могу я заплатить кредитной картой?</summary>
+          <p>Да, кредитными картами можно пользоваться во всех киосках с едой.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Что такое Золотой круг?</summary>
+          <p>В Золотом круге вы как можно ближе переживаете любимое выступление. Он расположен прямо перед сценой. Покажите билет Golden Circle, и вы попадёте в эту зону быстро и легко благодаря отдельному входу.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Есть ли места для инвалидных колясок?</summary>
+          <p>Конечно, есть. Однако места ограничены. Пожалуйста, свяжитесь с нами заранее для получения дополнительной информации.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Могу ли я перепродать свой билет, если не могу поехать?</summary>
+          <p>Перепродажа билетов запрещена. По соображениям безопасности мы также настоятельно не рекомендуем покупать билеты у кого-либо. Любой, кто попытается пройти на мероприятие с копией или подделкой билета, будет заподозрен в неправомерном использовании билетов и привлечён к ответственности.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__name">Stars in Graz</p>
+    <div class="footer__info">
+      <p><time datetime="2021-11-30">30.11.2021</time>, Messe Congress Graz. Первое выступление в 17:00.</p>
+      <ul class="footer__links">
+        <li><a href="#schedule">Расписание</a></li>
+        <li><a href="#artists">Артисты</a></li>
+        <li><a href="#tickets">Билеты</a></li>
+        <li><a href="#top">Наверх</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

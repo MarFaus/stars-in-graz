@@ -1,0 +1,11 @@
+# Local environment and secrets
+module-c/.env
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+
+# Nested module repositories (their .git folders stay local)
+module-b/.git/
+module-c/.git/
+module-d/.git/

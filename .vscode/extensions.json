@@ -1,0 +1,4 @@
+{
+  "recommendations": ["qwtel.sqlite-viewer"],
+  "unwantedRecommendations": ["alexcvzz.vscode-sqlite"]
+}

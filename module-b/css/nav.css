@@ -1,0 +1,134 @@
+.skip {
+  position: absolute;
+  top: 8px;
+  left: var(--margin);
+  z-index: 60;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: var(--black);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+
+.skip:focus-visible {
+  transform: translateY(0);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0 clamp(16px, 3vw, 48px);
+  height: var(--nav-h);
+  padding: 0 var(--margin);
+  background: rgba(0, 0, 0, 0.78);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.nav__brand {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav__links ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(16px, 2.4vw, 40px);
+}
+
+.nav__links a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 200ms var(--ease-out);
+}
+
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav__links a:hover {
+    color: var(--ink);
+  }
+
+  .nav__links a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.nav__buy {
+  padding: 0.75em 1.4em;
+  background: transparent;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav__buy:hover {
+    color: var(--black);
+  }
+}
+
+/* Phone and small tablet: brand and button on top, links scroll sideways below. */
+@media (max-width: 900px) {
+  :root {
+    --nav-h: 96px;
+  }
+
+  .nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 52px 44px;
+    align-content: center;
+  }
+
+  .nav__links {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0 calc(var(--margin) * -1);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav__links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav__links ul {
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 0 var(--margin);
+    width: max-content;
+  }
+
+  .nav__links a {
+    padding: 10px 0;
+    font-size: 0.9375rem;
+  }
+
+  .nav__buy {
+    padding: 0.65em 1.1em;
+    font-size: 0.8125rem;
+  }
+}
